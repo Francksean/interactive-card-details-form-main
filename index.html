@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/bank-cards-icon.png">
+    
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="styles_folders\main.css">
+    <script src="main.js" async></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="back-card">
+        <div class="back-card-content">
+          <p id="back-card-code">000</p>
+        </div>
+      </div>
+      <div class="front-card">
+        <div class="front-card-content">
+          <img src="/images/card-logo.svg" alt="">
+          <p id="front-card-code">0000 0000 0000 0000</p>
+          <div class="name-and-date">
+            <p id="front-card-name">000000 00000</p>
+            <div id="front-card-date">
+              <p class="month-content">00</p>
+              <p>/</p>
+              <p class="year-content">00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="right-side">
+      <form action="#" method="post">
+        <div class="card-name">
+          <label for="name">Cardholder Name</label>
+          <input id="name" type="text" placeholder="e.g. Jane Appleseed">
+        </div>
+        <div class="card-number">
+          <label for="card-number">Card Number</label>
+          <input id="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+  
+        <div class="exp-date">
+          <label for="date">Exp.  Date (MM/YY)</label>
+          <div id="year-and-month">
+            <input type="text" placeholder="MM" id="month">
+            <input type="text" placeholder="YY" id="year">
+          </div>
+        </div>
+        <div class="cvc-number">
+          <label for="cvc">CVC</label>
+          <input type="text" placeholder="e.g. 123" id="cvc">
+        </div>
+        <button type="button">Confirm</button>
+      </form>
+    </div>
+
+
+
+    <!-- Completed state start -->
+
+    <!-- Thank you!
+    We've added your card details
+    Continue
+     -->
+  
+  </body>
+</html>

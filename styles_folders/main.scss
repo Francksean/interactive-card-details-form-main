@@ -1,0 +1,158 @@
+@import 'variables';
+
+
+*{
+  margin: 0px;
+  font-family: $family;
+}
+body{
+  margin-bottom: 30px;
+}
+.header{
+  height: 350px;
+  background-image: url('../images/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+  .back-card{
+    background-image: url('../images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $border;
+    width: 420px;
+    height: 240px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    box-shadow: 5px 5px 10px black,
+    5px 5px 10px white;
+  }
+  .back-card-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  #back-card-code{
+    color: $white;
+    position: absolute;
+    top: 105px;
+    right: 10%;
+    font-size: $f-size;
+  }
+  .front-card{
+    background-image: url('../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 420px;
+    height: 240px;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: $border;
+    position: absolute;
+    left: 5%;
+    top: 153px;
+    color: $white;
+    box-shadow: 5px 5px 10px black;
+    padding: {
+      left: 15px;
+      top: 15px;
+    }
+  }
+  .front-card-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    #front-card-code{
+      position: absolute;
+      font-size: 25px;
+      top: 100px;
+      left: 13%;
+    }
+    .name-and-date{
+      width: 90%;
+      position: absolute;
+      bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+#front-card-date{
+  display: flex;
+}
+
+form{
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:100px 100px 100px 100px ;
+  gap: 10px;
+  .card-name{
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .card-number{
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  .exp-date{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    #year-and-month{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .cvc-number{
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  button{
+    color: $white;
+    font-size: 30px;
+    margin-top: 15px;
+    display: block;
+    grid-row: 4/5;
+    grid-column: 1/3;
+    border-radius: $border;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    transition: 0.3s;
+    &:hover{
+      transform: scale(1.02);
+    }
+  }
+  label, input{
+    display: block;
+  }
+  label{
+    padding-top: 10px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  input{
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    border-radius: $border;
+    border: 1px solid gainsboro;
+    margin-top: 15px;
+    margin-left: 5px;
+    padding-left: 15px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes shake {
+  0% { margin-bottom: 0rem; margin-top: 0rem;}
+  25% { margin-bottom: 1rem; margin-top: -1rem; }
+  75% { margin-bottom: -1rem; margin-top: 1rem; }
+  100% { margin-bottom: 0rem; margin-top: 0rem; }
+}
